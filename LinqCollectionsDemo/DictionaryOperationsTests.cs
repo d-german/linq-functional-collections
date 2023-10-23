@@ -41,7 +41,7 @@ public class DictionaryOperationsTests
         dictionary["Two"] = 22; // updates dictionary because "two" is now present
 
         var buf = new StringBuilder();
-        
+
         foreach (var (key, value) in dictionary) // tuple deconstruction
         {
             buf.Append($"{key}; {value} ");
@@ -50,7 +50,7 @@ public class DictionaryOperationsTests
         Assert.That(buf.ToString(), Is.EqualTo("One; 1 Two; 22 Three; 3 "));
 
         buf.Clear();
-        
+
         foreach (var str in dictionary.Keys)
         {
             buf.Append(str);
@@ -59,7 +59,7 @@ public class DictionaryOperationsTests
         Assert.That(buf.ToString(), Is.EqualTo("OneTwoThree"));
 
         buf.Clear();
-        
+
         foreach (var value in dictionary.Values)
         {
             buf.Append(value);
