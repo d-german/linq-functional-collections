@@ -22,6 +22,11 @@ public static class StringHashTableUtility
         return sum % hashSize;
     }
 
+    public static int CustomHashFunctionLinq(int hashSize, string value)
+    {
+        return value.Sum(c => c) % hashSize;
+    }
+
     /// <summary>
     /// Inserts a string value into a pre-sized hash table using a custom hash function.
     /// </summary>
